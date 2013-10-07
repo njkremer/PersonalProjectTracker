@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <script type="text/javascript" src="3rdParty/angular/angular.min.js"></script>
+    <script type="text/javascript" src="3rdParty/jquery-ui-1.10.3/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="3rdParty/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+    <script type="text/javascript" src="script/main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="3rdParty/bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="3rdParty/jquery-ui-1.10.3/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+
+    <title>Personal Project Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-controller="MainController">
+
+<div class="container-fluid">
+    <div class="navbar">
+        <div class="navbar-inner">
+        <a class="brand" href="#">{{owner}}'s Projects</a>
+        <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+          <form class="navbar-search pull-right">
+              <input type="text" class="search-query" placeholder="Search">
+          </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2" id="projects-panel">
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-repeat="project in projects">
+                    <a href="#">{{project.title}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="span10">
+            body
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="3rdParty/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
