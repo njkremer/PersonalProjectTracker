@@ -1,7 +1,8 @@
-function MainController($scope) {
+function MainController($scope, $http) {
     $scope.owner = "Nick";
+    $scope.projects = [];
 
-    $.ajax("data/projects/projects.json").done(function(data) {
-        $scope.projects = eval(data)
+    $http.get("/data/projects/projects.json").success(function(data) {
+        $scope.projects = data;
     });
 };

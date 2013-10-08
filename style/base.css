@@ -1,0 +1,7 @@
+html, body {
+    height: 100%;
+}
+
+.projects-panel {
+    border-right: thin solid lightgray;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
-    <script type="text/javascript" src="3rdParty/angular/angular.min.js"></script>
+    <script type="text/javascript" src="3rdParty/angular/angular.js"></script>
     <script type="text/javascript" src="3rdParty/jquery-ui-1.10.3/js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="3rdParty/jquery-ui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
 
@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" type="text/css" href="3rdParty/bootstrap/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="3rdParty/jquery-ui-1.10.3/css/ui-lightness/jquery-ui-1.10.3.custom.css">
+
+        <link rel="stylesheet" type="text/css" href="style/base.css">
 
     <title>Personal Project Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +32,11 @@
           </form>
         </div>
     </div>
-    <div class="row">
-        <div class="span2" id="projects-panel">
+    <div class="row main-section">
+        <div class="span2 projects-panel">
             <ul class="nav nav-pills nav-stacked">
                 <li ng-repeat="project in projects">
-                    <a href="#">{{project.title}}</a>
+                    <a href="#project-{{project.id}}" data-toggle="tab">{{project.title}}</a>
                 </li>
             </ul>
         </div>
